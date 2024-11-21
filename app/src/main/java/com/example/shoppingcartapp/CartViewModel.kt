@@ -22,8 +22,4 @@ class CartViewModel(application: Application) : AndroidViewModel(application) {
         repository.addOrUpdateItem(item)
     }
 
-    // Remove a cart item
-    fun removeItem(item: CartItem) = viewModelScope.launch {
-        repository.removeItem(item)
-    }
 }

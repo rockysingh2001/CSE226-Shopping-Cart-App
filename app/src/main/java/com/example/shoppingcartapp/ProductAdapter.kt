@@ -1,5 +1,6 @@
 package com.example.shoppingcartapp
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +14,7 @@ class ProductAdapter(
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     inner class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        @SuppressLint("SetTextI18n")
         fun bind(product: Product) {
             itemView.findViewById<TextView>(R.id.productName).text = product.name
             itemView.findViewById<TextView>(R.id.productPrice).text = "$${product.price}"
